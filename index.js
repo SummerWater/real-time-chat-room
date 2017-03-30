@@ -34,6 +34,7 @@ io.on('connection', (socket) => {
   // 改名命令
   socket.on('changeName', (newName) => {
     nickNames[socket.id] = newName;
+    chatStatus(socket);
   })
   // 输入状态
   socket.on('inputing', (msg) => {

@@ -6,45 +6,58 @@
 body {
 	font: 13px Helvetica, Arial;
 }
-form {
-	background: #000;
-	padding: 3px; position: fixed;
-	bottom: 0;
-	width: 100%; }
-form input {
-	border: 0;
-	padding: 10px;
-	width: 90%;
-	margin-right: .5%;
-}
-form button {
-	width: 9%;
-	background: rgb(130, 224, 255);
-	border: none;
-	padding: 10px;
-}
-#messages {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-#messages li {
-	padding: 5px 10px;
-}
-#messages li:nth-child(odd) {
-	background: #eee;
+html, body{
+	height: 100%;
+	overflow: hidden;
 }
 .red{
-  color: red;
-  font-size: 12px;
-  font-weight: normal;
-  text-decoration: underline;
+	color: red;
+	text-decoration: underline;
+}
+.content-wrapper{
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
 }
 #guestNumber{
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 0;
+	height: 36px;
+	line-height: 36px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+#messages{
+	height: calc(100% - 78px);
+	overflow: auto;
+}
+#messages li{
+	padding: 10px 0;
+}
+#messages li:nth-child(odd){
+	background-color: #eee;
+}
+.message-wrapper{
+	height: 42px;
+	line-height: 42px;
+	padding: 2px;
+	background-color: #666;
+}
+.message-wrapper input{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 75%;
+}
+.message-wrapper button{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: calc(25% - 2px);
+	margin-left: 2px;
+	background-color: #317ef3;
+	border: none;
+	color: #fff;
 }
